@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+# DESCRIPTION
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is only a small demo project, with the main idea is about showing information of some citizens.
+The main purpose of this project is to show my coding style, and not focus on utilizing technology / performance or the business meaning of the project.
+Some of the code might be redundant and not really effective in practical situation, yet once again, this project is for demonstrating coding style only.
 
-## Available Scripts
+For the simplified purpose, i have removed a majority of important pattern and tech, including redux, form and modal, and some practical method like useRef, useCallback,...
+Also, i do not include testing in this project, normally i would use Jest for testing.
 
-In the project directory, you can run:
+## FOLDER STRUCTURE
 
-### `npm start`
+```
+src/
+├── shared                  # Contains things that share among views in the application
+|   ├── components          # Common components
+|   ├── hooks               # Common custom hooks sharing among components
+|   ├── utils               # Utilities, since this is a small project, i include the services in here as well
+├── views                   # Define views based on route path
+```
+Each folder in views folder would be a screen/main component. It would have a set of container / hook / view,... alongside with it. Also, for children components of the current one, each of the would be created in a folder inside the parent components
+# DISCLAIMER
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project really small and is not based on any realistic project of any organization.
+All the code here is just for demonstrating the coding style and has no business and practical meaning. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Nguyen Trong Anh, 27-07-2022
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
