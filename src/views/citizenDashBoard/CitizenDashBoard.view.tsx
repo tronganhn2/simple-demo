@@ -5,7 +5,7 @@ import CitizenCardContainer from "./citizenCard/CitizenCard.container";
 import { useSelectedCitizenContext } from "./CitizenDashBoard.context";
 import { CitizenShortInfo } from "./CitizenDashBoard.types";
 
-// Most calculating units should be dynamic and used along side with theme and spacing, yet since this is just
+// NOTE: Most calculating units should be dynamic and used along side with theme and spacing, yet since this is just
 // for demo purposes, i used fixed unit here
 
 const CitizensSelectionWarp = styled("div")(() => ({
