@@ -24,7 +24,11 @@ const CitizenCardContainer: React.FC = () => {
   useEffect(() => {
     const getCitizenDetailInfo = async (selectedCitizenId: string): Promise<void> => {
       // NOTE: send request to BE here, yet since this is a demo project, mock data would be used here
-      // const result = await RestClient.get(`${GET_CITIZEN_DETAIL_INFO}/:${selectedCitizenId}`)
+      // try {
+      //   const result = await RestClient.get(`${GET_CITIZEN_DETAIL_INFO}/:${selectedCitizenId}`)
+      // } catch (error) {
+      //   toast.error(error);
+      // }
       const result = mockCitizenDetailInfo[selectedCitizenId];
       result && transformDetailInfo(result)
       setCitizenDetail(result)

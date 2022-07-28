@@ -11,19 +11,23 @@ import { RestClient } from "../../utils/RestClient";
 import { GET_ALL_CITIZEN_SHORT_INFO } from "./CitizenDashBoard.constant";
 
 /**
-* Container component of citizen dashboard, used for handling all logic and pass processed resources to the view component
-*/
+ * Container component of citizen dashboard, used for handling all logic and pass processed resources to the view component
+ */
 const CitizenDashBoardContainer: React.FC = () => {
   const [selectedCitizenId, setSelectedCitizenId] = useState<string>(EMPTY_STRING);
   const [allCitizenShortInfo, setAllCitizenShortInfo] = useState<CitizenShortInfo[]>([]);
 
   /**
-  * Call API to get the data (all citizen short information) from server when first loaded
-  */
+   * Call API to get the data (all citizen short information) from server when first loaded
+   */
   useMounting(() => {
     const getAllCitizenShortInfo = async (): Promise<void> => {
-      // NOTE: send request to BE here, yet since this is a demo project, mock data would be used here 
-      // const result = await RestClient.get(GET_ALL_CITIZEN_SHORT_INFO)
+      // NOTE: send request to BE here, yet since this is a demo project, mock data would be used here
+      // try {
+      //   const result = await RestClient.get(GET_ALL_CITIZEN_SHORT_INFO)
+      // } catch (error) {
+      //   toast.error(error);
+      // }
       const result = mockAllCitizenInfo as CitizenShortInfo[];
       setAllCitizenShortInfo(result);
     };

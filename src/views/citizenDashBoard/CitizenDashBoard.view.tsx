@@ -59,6 +59,7 @@ const CitizenDashBoardView: React.FC<CitizenDashBoardViewProps> = (props) => {
       <CitizensSelectionSection>
         {allCitizenShortInfo.length > 0 &&
           allCitizenShortInfo.map((citizen) => (
+            // I use arrow function here instead of an event handler for simplification
             <Item key={citizen.profileId} onClick={() => setSelectedCitizenId(citizen.profileId)}>{citizen.name}</Item>
           ))}
       </CitizensSelectionSection>
